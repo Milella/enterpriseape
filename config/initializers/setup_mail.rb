@@ -4,7 +4,7 @@ ActionMailer::Base.smtp_settings = {
   :port                   =>    '587',
   :authentication         =>    :plain,
   :user_name              =>    'apikey',
-  :password               =>    <%= ENV['SMTP_RELAY_SENDGRID_APIKEY'] %>,
+  :password               =>    Rails.application.credentials.SMTP_RELAY_SENDGRID_APIKEY,
   :domain                 =>    'heroku.com',
   :enable_starttls_auto   =>    true
 

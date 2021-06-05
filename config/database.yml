@@ -30,4 +30,4 @@ production:
   database: db/enterpriseape
   DATABASE_URL: <%= ENV['DATABASE_URL'] %>
   username: enterpriseape_db_app_login
-  password: <%= ENV['CTRLPANEL_DATABASE_PASSWORD'] %>
+  password: <%= ENV['ENTERPRISEAPE_DATABASE_PASSWORD'] %>
