@@ -31,6 +31,8 @@
   </div>
 <br/>
 <br/>
+<%= link_to 'New Company', new_company_path, class: 'btn btn-primary' %>
+<br/>
 <h3>Import Companies</h3>
 <br/>
 <%= form_tag import_companies_path, multipart: true do %>
@@ -39,4 +41,8 @@
 <% end %>
 <br/>
 <br/>
-<%= link_to 'New Company', new_company_path, class: 'btn btn-primary' %>
+<h3>Download File</h3>
+<%=link_to "Report", companies_path(format: "csv"), class: 'btn btn-primary' %>
+
+
+
