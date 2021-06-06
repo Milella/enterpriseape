@@ -32,9 +32,31 @@
 </div>  
   
   <div class="container">
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
-    <%= yield %>
+  <br/>
+   <% if flash[:notice] %>
+     <div class="alert alert-success" role="alert">
+       <button type="button" class="close" data-bs-dismiss="alert">&times;</button>
+       <%= flash[:notice] %>
+     </div>
+
+  <% elsif flash[:error] %>
+    <div class="alert alert-danger" role="alert">
+      <button type="button" class="close" data-bs-dismiss="alert">&times;</button>
+      <%= flash[:error] %>
+    </div>
+
+  <% elsif flash[:alert] %>
+    <div class="alert alert-warning" role="alert">
+      <button type="button" class="close" data-bs-dismiss="alert">&times;</button>
+      <%= flash[:alert] %>
+    </div>
+
+  <% end %>
+
+  <br/>
+
+  <%= yield %>
+
   </div>
   
 </body>
