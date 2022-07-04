@@ -1,4 +1,9 @@
+# frozen_string_literal: true
+
 class InvoiceSearch
+
+  # This is a class
+
   attr_reader :date_from, :date_to
 
   def initialize(params)
